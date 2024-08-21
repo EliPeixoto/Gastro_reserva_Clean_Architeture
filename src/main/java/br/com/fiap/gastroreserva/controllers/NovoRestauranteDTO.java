@@ -1,9 +1,8 @@
-package br.com.fiap.gastroreserva.entities;
+package br.com.fiap.gastroreserva.controllers;
 
 import java.util.List;
 
-public class Restaurante {
-    private Long id;
+public class NovoRestauranteDTO {
     private String nome;
     private String endereco;
     private String telefone;
@@ -12,8 +11,12 @@ public class Restaurante {
     private String descricao;
     private List<String> fotos;
 
-    public Restaurante(Long id, String nome, String endereco, String telefone, String tipoCulinaria, String horarioFuncionamento, String descricao, List<String> fotos) {
-        this.id = id;
+    // Construtores
+    public NovoRestauranteDTO() {}
+
+    public NovoRestauranteDTO(String nome, String endereco, String telefone,
+                              String tipoCulinaria, String horarioFuncionamento,
+                              String descricao, List<String> fotos) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -23,18 +26,7 @@ public class Restaurante {
         this.fotos = fotos;
     }
 
-    public Restaurante() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    // Getters e Setters
     public String getNome() {
         return nome;
     }
@@ -91,12 +83,16 @@ public class Restaurante {
         this.fotos = fotos;
     }
 
-    public boolean isInformacoesBasicasPreenchidas() {
-        return nome != null && !nome.isEmpty() &&
-                endereco != null && !endereco.isEmpty() &&
-                telefone != null && !telefone.isEmpty() &&
-                tipoCulinaria != null && !tipoCulinaria.isEmpty() &&
-                horarioFuncionamento != null && !horarioFuncionamento.isEmpty();
+    @Override
+    public String toString() {
+        return "NovoRestauranteDTO{" +
+                "nome='" + nome + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", tipoCulinaria='" + tipoCulinaria + '\'' +
+                ", horarioFuncionamento='" + horarioFuncionamento + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", fotos=" + fotos +
+                '}';
     }
-
 }

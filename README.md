@@ -71,7 +71,7 @@ Na aba Authorization - selecionaro type -Basic Auth e informar os dados abaixo
 
 ## 🤝 Integrantes
 
-- ELIANE PEIXOTO 
+- ELIANE ROSA PEIXOTO 
 
 - PAULA CRISTINA NASCIMENTO GOMES 
 
