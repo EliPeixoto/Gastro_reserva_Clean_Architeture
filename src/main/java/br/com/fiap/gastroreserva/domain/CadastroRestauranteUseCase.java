@@ -1,4 +1,4 @@
-package br.com.fiap.gastroreserva.usecase;
+package br.com.fiap.gastroreserva.domain;
 
 import br.com.fiap.gastroreserva.entities.Restaurante;
 import br.com.fiap.gastroreserva.exceptions.InformacoesIncompletasException;
