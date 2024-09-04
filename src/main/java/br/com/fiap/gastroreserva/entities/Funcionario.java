@@ -15,6 +15,9 @@ public class Funcionario {
         this.permissoes = permissoes;
     }
 
+    public Funcionario() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -29,6 +32,18 @@ public class Funcionario {
 
     public List<String> getPermissoes() {
         return permissoes;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public void setPermissoes(List<String> permissoes) {
+        this.permissoes = permissoes;
     }
 
     public boolean temPermissao(String permissao) {
