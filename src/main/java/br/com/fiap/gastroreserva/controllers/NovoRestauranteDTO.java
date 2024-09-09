@@ -1,5 +1,7 @@
 package br.com.fiap.gastroreserva.controllers;
 
+import br.com.fiap.gastroreserva.entities.FuncionarioEntity;
+
 import java.util.List;
 
 public class NovoRestauranteDTO {
@@ -10,6 +12,15 @@ public class NovoRestauranteDTO {
     private String horarioFuncionamento;
     private String descricao;
     private List<String> fotos;
+    private FuncionarioEntity funcionarioEntity;
+
+    public FuncionarioEntity getFuncionario() {
+        return funcionarioEntity;
+    }
+
+    public void setFuncionario(FuncionarioEntity funcionarioEntity) {
+        this.funcionarioEntity = funcionarioEntity;
+    }
 
     // Construtores
     public NovoRestauranteDTO() {}

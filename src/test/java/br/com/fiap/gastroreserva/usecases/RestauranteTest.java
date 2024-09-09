@@ -1,6 +1,6 @@
-package br.com.fiap.gastroreserva.domain;
+package br.com.fiap.gastroreserva.usecases;
 
-import br.com.fiap.gastroreserva.entities.Restaurante;
+import br.com.fiap.gastroreserva.entities.RestauranteEntity;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -12,7 +12,7 @@ class RestauranteTest {
 
     @Test
     void deveCadastrarRestaurante() {
-        Restaurante restaurante = new Restaurante(
+        RestauranteEntity restaurante = new RestauranteEntity(
                 1L,
                 "gastroReserva",
                 "Endereco",
@@ -44,7 +44,7 @@ class RestauranteTest {
 
     @Test
     void deveAlterarNomeDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setNome("Novo nome");
         String nomeRestaurante = restaurante.getNome();
         assertEquals("Novo nome", nomeRestaurante);
@@ -52,7 +52,7 @@ class RestauranteTest {
 
     @Test
     void deveAlterarEnderecoDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setEndereco("Novo endereco");
         String endereco = restaurante.getEndereco();
         assertEquals("Novo endereco", endereco);
@@ -60,7 +60,7 @@ class RestauranteTest {
 
     @Test
     void deveAlterarTelefoneDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setTelefone("2222222");
         String telefone = restaurante.getTelefone();
         assertEquals("2222222", telefone);
@@ -68,14 +68,14 @@ class RestauranteTest {
 
     @Test
     void deveAlterarTipoCulinariaDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setTipoCulinaria("novo Tipo Culinaria");
         assertEquals("novo Tipo Culinaria", restaurante.getTipoCulinaria());
     }
 
     @Test
     void deveAlterarHorarioDeAtendimentoDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setHorarioFuncionamento("Novo horario de atendimento");
         String horarioFuncionamento = restaurante.getHorarioFuncionamento();
         assertEquals("Novo horario de atendimento", horarioFuncionamento);
@@ -83,7 +83,7 @@ class RestauranteTest {
 
     @Test
     void deveAlterarDescricaoDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setDescricao("Nova Descricao do Restaurante");
         String descricao = restaurante.getDescricao();
         assertEquals("Nova Descricao do Restaurante", descricao);
@@ -91,7 +91,7 @@ class RestauranteTest {
 
     @Test
     void deveAlterarFotosDoRestaurante() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         restaurante.setFotos(Arrays.asList("fotoNova1.jpg", "fotoNova2.jpg", "fotoNova3.jpg"));
         List<String> fotos = restaurante.getFotos();
         assertEquals(Arrays.asList("fotoNova1.jpg", "fotoNova2.jpg", "fotoNova3.jpg"), fotos);
@@ -99,7 +99,7 @@ class RestauranteTest {
 
     @Test
     void deveCriarRestauranteSemParametros() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         String nome = restaurante.getNome();
         String endereco = restaurante.getEndereco();
         String telefone = restaurante.getTelefone();
@@ -119,7 +119,7 @@ class RestauranteTest {
 
     @Test
     void deveRetornarTrueQuandoInformacoesBasicasPreenchidas() {
-        Restaurante restaurante = new Restaurante(
+        RestauranteEntity restaurante = new RestauranteEntity(
                 1L,
                 "gastroReserva",
                 "Endereco",
@@ -135,7 +135,7 @@ class RestauranteTest {
 
     @Test
     void deveRetornarFalseQuandoInformacoesBasicasNaoPreenchidas() {
-        Restaurante restaurante = new Restaurante();
+        RestauranteEntity restaurante = new RestauranteEntity();
         assertEquals(false, restaurante.isInformacoesBasicasPreenchidas());
     }
 

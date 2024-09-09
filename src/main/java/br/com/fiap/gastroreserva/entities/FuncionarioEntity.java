@@ -2,20 +2,20 @@ package br.com.fiap.gastroreserva.entities;
 
 import java.util.List;
 
-public class Funcionario {
+public class FuncionarioEntity {
     private Long id;
     private String nome;
     private String cargo;
     private List<String> permissoes;
 
-    public Funcionario(Long id, String nome, String cargo, List<String> permissoes) {
+    public FuncionarioEntity(Long id, String nome, String cargo, List<String> permissoes) {
         this.id = id;
         this.nome = nome;
         this.cargo = cargo;
         this.permissoes = permissoes;
     }
 
-    public Funcionario() {
+    public FuncionarioEntity() {
     }
 
     public Long getId() {

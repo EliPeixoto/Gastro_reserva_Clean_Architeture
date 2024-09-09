@@ -1,7 +1,8 @@
+/*
 package br.com.fiap.gastroreserva.gateways.persistence;
 
 import br.com.fiap.gastroreserva.entities.Restaurante;
-import br.com.fiap.gastroreserva.interfaces.RestauranteRepository;
+import br.com.fiap.gastroreserva.interfaces.RestauranteGateway;
 import jakarta.persistence.EntityManager;
 import org.springframework.stereotype.Repository;
 
@@ -9,10 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class RestauranteRepositoryImpl implements RestauranteRepository {
+public class RestauranteGatewayImpl implements RestauranteGateway {
     private final EntityManager entityManager;
 
-    public RestauranteRepositoryImpl(EntityManager entityManager) {
+    public RestauranteGatewayImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
     @Override
@@ -37,3 +38,4 @@ public class RestauranteRepositoryImpl implements RestauranteRepository {
                 .getResultList();
     }
 }
+*/

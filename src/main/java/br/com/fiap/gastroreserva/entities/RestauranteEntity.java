@@ -2,7 +2,7 @@ package br.com.fiap.gastroreserva.entities;
 
 import java.util.List;
 
-public class Restaurante {
+public class RestauranteEntity {
     private Long id;
     private String nome;
     private String endereco;
@@ -12,7 +12,7 @@ public class Restaurante {
     private String descricao;
     private List<String> fotos;
 
-    public Restaurante(Long id, String nome, String endereco, String telefone, String tipoCulinaria, String horarioFuncionamento, String descricao, List<String> fotos) {
+    public RestauranteEntity(Long id, String nome, String endereco, String telefone, String tipoCulinaria, String horarioFuncionamento, String descricao, List<String> fotos) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
@@ -23,7 +23,7 @@ public class Restaurante {
         this.fotos = fotos;
     }
 
-    public Restaurante() {
+    public RestauranteEntity() {
 
     }
 
